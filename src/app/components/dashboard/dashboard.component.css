@@ -1,0 +1,108 @@
+/* Main Container */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Headings */
+  h2, h3 {
+    color: #342329;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Overview Section */
+  p {
+    font-size: 16px;
+    color: #342329;
+    margin: 5px 0;
+  }
+  
+  /* Styling for Amounts */
+  p strong {
+    font-weight: bold;
+    color: #BF7ABB; /* Soft Pink */
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Headers */
+  th {
+    background: #BF7ABB; /* Soft Pink */
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  /* Table Rows */
+  td {
+    padding: 12px;
+    text-align: center;
+    color: #342329;
+    font-weight: 500;
+  }
+  
+  /* Alternate Row Colors */
+  tr:nth-child(even) {
+    background: rgba(201, 223, 242, 0.3);
+  }
+  
+  tr:nth-child(odd) {
+    background: rgba(191, 122, 187, 0.3);
+  }
+  
+  /* Transaction Type (Income/Expense) Styling */
+  td[style*="color: green"] {
+    font-weight: bold;
+    color: #008000; /* Green for income */
+  }
+  
+  td[style*="color: red"] {
+    font-weight: bold;
+    color: #FF4C4C; /* Red for expenses */
+  }
+  
+  /* Hover Effect */
+  tr:hover {
+    background: rgba(228, 194, 227, 0.4);
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 8px;
+    }
+  }
+  

@@ -1,0 +1,24 @@
+<h3>Add Transaction</h3>
+<form (submit)="onSubmit()" class="transaction-form">
+  
+  <!-- Transaction Type Dropdown -->
+  <label for="type">Type:</label>
+  <select [(ngModel)]="type" name="type" (change)="onTypeChange()" id="type">
+    <option value="income">Income</option>
+    <option value="expense">Expense</option>
+  </select>
+
+  <!-- ✅ Category Dropdown (Now Fully Fixed) -->
+  <label for="category">Category:</label>
+  <select [(ngModel)]="category" name="category" id="category">
+    <option *ngFor="let cat of availableCategories" [value]="cat">{{ cat }}</option>
+  </select>
+
+  <label for="amount">Amount:</label>
+  <input type="number" [(ngModel)]="amount" name="amount" id="amount" required />
+
+  <label for="comment">Comment:</label>
+  <textarea [(ngModel)]="comment" name="comment" id="comment"></textarea>
+
+  <button type="submit">Add Transaction</button>
+</form>

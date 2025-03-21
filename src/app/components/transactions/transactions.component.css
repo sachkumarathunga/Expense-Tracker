@@ -1,0 +1,55 @@
+.transaction-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+    text-align: center;
+    color: #342329;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th {
+    background: #BF7ABB;
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    color: #342329;
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background: rgba(201, 223, 242, 0.3);
+}
+
+tr:nth-child(odd) {
+    background: rgba(191, 122, 187, 0.3);
+}
+
+tr:hover {
+    background: rgba(228, 194, 227, 0.4);
+    transition: all 0.3s ease-in-out;
+}

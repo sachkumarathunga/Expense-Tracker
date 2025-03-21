@@ -1,0 +1,30 @@
+<div class="transaction-container">
+    <h3>Transaction History</h3>
+
+    <!-- Month Filter Dropdown -->
+    <label for="month">Select Month:</label>
+    <select [(ngModel)]="selectedMonth" name="month" (change)="filterTransactions()" id="month">
+      <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+    </select>
+
+    <!-- Transaction History Table -->
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Comment</th>
+      </tr>
+      <tr *ngFor="let txn of filteredTransactions">
+        <td>{{ txn.date }}</td>
+        <td [style.color]="txn.type === 'income' ? 'green' : 'red'"><strong>{{ txn.type }}</strong></td>
+        <td>{{ txn.category }}</td>
+        <td>LKR {{ txn.amount | number:'1.2-2' }}</td>
+        <td>{{ txn.comment }}</td>
+      </tr>
+    </table>
+
+    <!-- Download PDF Button -->
+    <button (click)="downloadPDF()">Download PDF</button>
+</div>

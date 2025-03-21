@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>Monthly Overview</h2>
+    <p><strong>Salary:</strong> LKR {{ salary }}</p>
+    <p><strong>Remaining Balance:</strong> LKR {{ remainingBalance }}</p>
+    <p><strong>Savings:</strong> LKR {{ savings }}</p>
+
+    <!-- Transaction History -->
+    <h3>Transaction History</h3>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Comment</th>
+      </tr>
+      <tr *ngFor="let txn of transactions">
+        <td>{{ txn.date }}</td>
+        <td [style.color]="txn.type === 'income' ? 'green' : 'red'"><strong>{{ txn.type }}</strong></td>
+        <td>{{ txn.category }}</td>
+        <td>LKR {{ txn.amount | number:'1.2-2' }}</td>
+        <td>{{ txn.comment }}</td>
+      </tr>
+    </table>
+
+    <!-- Category-Wise Expenses -->
+    <h3>Category-Wise Expenses</h3>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Amount</th>
+      </tr>
+      <tr *ngFor="let category of categoryExpenses | keyvalue">
+        <td>{{ category.key }}</td>
+        <td>LKR {{ category.value | number:'1.2-2' }}</td>
+      </tr>
+    </table>
+</div>
