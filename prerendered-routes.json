@@ -1,3 +1,9 @@
 {
-  "routes": {}
+  "routes": {
+    "/Expense-Tracker": {},
+    "/Expense-Tracker/add-transaction": {},
+    "/Expense-Tracker/dashboard": {},
+    "/Expense-Tracker/transaction-history": {},
+    "/Expense-Tracker/transactions": {}
+  }
 }
